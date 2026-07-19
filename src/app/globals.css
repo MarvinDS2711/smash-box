@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --line: rgba(27, 24, 21, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: #fbf8f1;
+  color: #1b1815;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus visible for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #ae8646;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: #6e2a33;
+  color: #fbf8f1;
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-content px-7;
+  }
+  .eyebrow {
+    @apply mb-4 text-xs font-semibold uppercase tracking-[0.32em] text-gold;
+  }
+  .title {
+    @apply font-serif font-semibold leading-[1.12] text-[clamp(2rem,4.6vw,3.2rem)];
+  }
+  .lead {
+    @apply mx-auto max-w-2xl text-[1.06rem] text-muted;
+  }
+  .rule {
+    @apply my-6 h-[2px] w-[52px] bg-gold;
+  }
+  .btn {
+    @apply inline-flex cursor-pointer items-center gap-2 rounded-full border border-transparent px-7 py-[0.95em] text-[0.82rem] font-semibold uppercase tracking-[0.14em] transition-all duration-300;
+  }
+  .btn-primary {
+    @apply bg-ink text-paper hover:-translate-y-0.5 hover:bg-bordeaux;
+  }
+  .btn-gold {
+    @apply bg-gold text-white hover:-translate-y-0.5 hover:bg-gold-soft;
+  }
+  .btn-ghost {
+    @apply border-white/50 bg-transparent text-paper hover:border-white hover:bg-white/10;
+  }
+  .btn-outline {
+    @apply border-[var(--line)] bg-transparent text-ink hover:-translate-y-0.5 hover:border-ink;
+  }
+}
+
+/* Barre de catégories : défilement horizontal sans scrollbar visible */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Masonry columns */
+.masonry {
+  column-count: 3;
+  column-gap: 16px;
+}
+@media (max-width: 900px) {
+  .masonry { column-count: 2; }
+}
+@media (max-width: 560px) {
+  .masonry { column-count: 1; }
+}
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}

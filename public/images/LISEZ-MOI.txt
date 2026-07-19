@@ -1,0 +1,14 @@
+DÉPOSEZ ICI LES VRAIES PHOTOS DU RESTAURANT (mêmes noms) :
+
+  facade.jpg      -> photo de couverture (façade CANCAN, store vert)
+  salle.jpg       -> la salle intérieure
+  veranda.jpg     -> la véranda / terrasse
+  bar.jpg         -> le bar et ses bouteilles
+  cocktail.jpg    -> un cocktail
+  rumsteak.jpg    -> un plat
+  cafe.jpg        -> un café viennois
+  croissants.jpg  -> les viennoiseries
+  ambiance.jpg    -> une photo d'ambiance
+
+Format conseillé : .jpg, ~1600 px de large, paysage pour la couverture.
+Le site les charge automatiquement (hero + galerie) une fois déposées.
